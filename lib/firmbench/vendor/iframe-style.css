@@ -1,0 +1,363 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  position: relative;
+  font-family: "architype-light";
+  min-height: 100vh;
+  background: #efefef;
+}
+
+.btn-group-vertical>.btn-group:after, .btn-group-vertical>.btn-group:before, .btn-toolbar:after, .btn-toolbar:before, .clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .dl-horizontal dd:after, .dl-horizontal dd:before, .form-horizontal .form-group:after, .form-horizontal .form-group:before, .modal-footer:after, .modal-footer:before, .modal-header:after, .modal-header:before, .nav:after, .nav:before, .navbar-collapse:after, .navbar-collapse:before, .navbar-header:after, .navbar-header:before, .navbar:after, .navbar:before, .pager:after, .pager:before, .panel-body:after, .panel-body:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+p{
+  margin: 0;
+}
+h2{
+  font-size: 2em;
+  line-height: 1.4em;
+  margin: .5em 0;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: inherit;
+  font-family: "architype-light";
+}
+.para-txt{
+  line-height: 1.4em;
+  font-family: "architype-light";
+  margin-bottom: 50px;
+}
+
+h2 {
+    margin-top: 1.5em;
+}
+h4{
+  font-size: 20px;
+  font-family: "architype-bold";
+  font-weight: normal;
+  letter-spacing: 0.2px;
+}
+a{
+  color: #fa4132;
+  text-decoration: none;
+}
+blockquote {
+  background: #fff;
+  padding: 50px 100px !important;
+  margin: 50px 0 !important;
+  font-size: 2.2em !important;
+  line-height: 1.4em;
+  border: 0 !important;
+  color: inherit;
+  clear: both;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.box-2x1{
+  width: 50%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.box-2x1 .national-graph{
+  display: block;
+}
+.graph-block{
+  min-height: 180px;
+  background: #fff;
+}
+.national-graph p{
+  margin-top: 20px;
+}
+
+.main-graph-box{
+  overflow: hidden;
+}
+
+.firm-graph{
+  display: block;
+  overflow: hidden;
+  margin-top: 30px;
+}
+.firm-graph::first-child{
+  margin-top: 0;
+}
+
+.common-btn{
+  background: #ef4135 url(../images/arrow-right.png) no-repeat right 21px;
+  border: 0 none;
+  border-radius: 0;
+  color: #fff !important;
+  font-family: "architype-light",sans-serif !important;
+  font-size: 18px;
+  position: relative;
+  padding: 18px 40px 18px 20px;
+  text-align: left;
+  transition: all 0.25s ease-in-out 0s;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 24px;
+  min-width:165px;
+}
+.get-btn{
+  margin-top:35px;
+}
+.compare-btn{
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+.clearfix {
+  display: block;
+}
+
+@media (max-width:767px){
+  .box-2x1{
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+  }
+  blockquote {
+    padding: 30px 50px !important;
+  }
+  .margin-bottom30{
+    margin-bottom: 30px !important;
+  }
+  ul.form-compare li.side-by-side{
+    width: 100% !important;
+    margin-right: 0 !important;
+    clear: both !important;
+    float: none !important;
+    display: block !important;
+  }
+  .firm-content .box-1x1{
+    width: 82% !important;
+  }
+}
+
+.legend-item{
+  clear: both;
+  display: inline-block;
+}
+
+/*MODAL*/
+
+.slide-modal{
+  /* padding: 20px 30px; */
+  background: #808080;
+  color: #fff;
+  display: block;
+  overflow: hidden;
+}
+.slide-modal h2{
+  font-size: 51px;
+  padding: 10px 0;
+  margin: 0 0 40px 0;
+  display: block;
+}
+.slide-modal form{
+  display: block;
+}
+form ul.form-compare{
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.form-compare li{
+  display: block;
+  margin-bottom: 30px;
+  clear: both;
+}
+ul.form-compare li.side-by-side{
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+  display: inline-block;
+  clear: none;
+}
+ul.form-compare li.side-by-side.no-margin{
+  margin-right: 0;
+}
+
+ul.form-compare li input[type="text"]{
+  padding: 10px;
+  font-family: "architype-light";
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  color: #646464;
+  border: 0 none;
+  background: #fff;
+}
+ul.form-compare li select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-family: "architype-light";
+    background: #fff url("../images/drop-down-arrow.jpg") no-repeat scroll right center !important;
+    line-height: 24px;
+    font-size: 18px;
+    color: #808080;
+    padding-right: 48px;
+    font-weight: normal;
+    padding: 0px 70px 0px 10px;
+    border: 0 none;
+    width: 100%;
+    height: 60px;
+}
+a.close-btn{
+  font-size: 36px;
+  color: #FFF;
+  text-decoration: none;
+  display: inline;
+  clear: both;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 60px;
+  float: right;
+}
+a.close-btn:hover{
+  color: #fff;
+  text-decoration: none;
+}
+.disclaimer-firm{
+  margin: 60px 0;
+  display: block;
+}
+.disclaimer-firm h4{
+  font-size: 16px;
+  font-family: "architype-light";
+  font-weight: normal !important;
+  margin: 0 0 20px 0;
+}
+
+
+/* General styles for the modal */
+
+.firm-modal {
+	position: fixed;
+	top: -110%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+	opacity: 0;
+}
+.form-modal * {
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.firm-show {
+	visibility: visible;
+}
+
+.firm-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.firm-show ~ .firm-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Content styles */
+.firm-content {
+	color: #fff;
+	position: relative;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+
+.firm-content h3 {
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 300;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+
+.firm-content > div {
+	font-weight: 300;
+	font-size: 1.15em;
+}
+.firm-content .box-1x1{
+  width: 66%;
+  padding: 70px 0;
+  margin: 0 auto;
+}
+
+/* Individual modal styles with animations/transitions */
+
+/* Effect 7:  slide and stick to top */
+.firm-effect-7.firm-show{
+  top: 0;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+	opacity: 1;
+}
+
+.firm-effect-7 .firm-content {
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+	opacity: 0;
+}
+
+.firm-show.firm-effect-7 .firm-content {
+	border-radius: 0 0 3px 3px;
+	opacity: 1;
+}
+
+
+
+@media screen and (max-width: 32em) {
+	body { font-size: 75%; }
+  .firm-modal{
+    position: absolute;
+  }
+}

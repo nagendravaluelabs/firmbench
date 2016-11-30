@@ -1,0 +1,13 @@
+{
+  "name": "charts-extend",
+  "keywords": [
+    "ember-addon"
+  ],
+  "dependencies": {
+    "ember-charts": "1.2.0",
+    "ember-cli-htmlbars": "^1.1.0"
+  },
+  "ember-addon": {
+    "after": "ember-charts"
+  }
+}

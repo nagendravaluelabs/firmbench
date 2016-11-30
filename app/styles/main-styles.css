@@ -1,0 +1,27 @@
+
+h2{
+  font-size: 2em;
+  line-height: 1.4em;
+  margin: .5em 0;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: inherit;
+  font-family: "architype-light";
+}
+p{
+  line-height: 1.4em;
+  font-family: "architype-light";
+}
+main {
+  display: block;
+  padding-top: 44px;
+}
+.page-wrapper {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: #efefef;
+  -webkit-transition: opacity 250ms ease,-webkit-transform 250ms ease;
+  transition: opacity 250ms ease,-webkit-transform 250ms ease;
+  transition: opacity 250ms ease,transform 250ms ease;
+  transition: opacity 250ms ease,transform 250ms ease,-webkit-transform 250ms ease;
+}
