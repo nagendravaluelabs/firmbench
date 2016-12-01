@@ -90,6 +90,10 @@ blockquote {
   overflow: hidden;
   margin-top: 30px;
 }
+.firm-graph h3{
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
 .firm-graph::first-child{
   margin-top: 0;
 }
@@ -112,6 +116,11 @@ blockquote {
 }
 .get-btn{
   margin-top:35px;
+}
+.back-btn {
+  float: right;
+  background: #ef4135 url(../images/arrow-back.png) no-repeat -10px 21px;
+  padding: 18px 20px 18px 40px;
 }
 .compare-btn{
   display: inline-block;

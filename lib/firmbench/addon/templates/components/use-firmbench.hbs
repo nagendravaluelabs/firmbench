@@ -5,36 +5,61 @@
     Lorem Ipsum has been the industry's standard dummy text ever since the
     1500s, when an unknown printer took a galley of type and scrambled it to
     make a type specimen book.</p>
+    <button class="get-btn common-btn back-btn" {{action 'backToHomeScreen'}}>Back</button>
+    <div class="clearfix"></div>
   <div class="row">
-    <div class="main-graph-box">
-      <div class="firm-graph">
-        <div class="box-2x1">
-          <div class="graph-block">{{use-donut data = donutData otherData = donutData hasLegend = true showLegend
-            = true defaultOuterHeight = 200 defaultOuterWidth = 400 horizontalMarginLeft
-            = -100 width= 400 }}</div>
-        </div>
-        <div class="box-2x1">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it to
-            make a type specimen book.</p>
-        </div>
-      </div>
-    </div>
-    <div class="main-graph-box">
-      <div class="firm-graph">
-        <div class="box-2x1">
-          <div class="graph-block">{{vertical-bar-chart data = donutData hasLegend=true defaultOuterHeight
-            = 300 defaultOuterWidth = 200 }}</div>
-        </div>
-        <div class="box-2x1">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it to
-            make a type specimen book.</p>
+    {{#if firmBenchNet}}
+      <div class="main-graph-box">
+        <div class="firm-graph">
+          <h3>Net Revenue</h3>
+          <div class="box-2x1">
+           <div class="graph-block">{{vertical-bar-chart data = ChartData1 hasLegend=true defaultOuterHeight
+              = 300 defaultOuterWidth = 200 }}</div>
+          </div>
+          <div class="box-2x1">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the
+              1500s, when an unknown printer took a galley of type and scrambled it to
+              make a type specimen book.</p>
+          </div>
         </div>
       </div>
-    </div>
+    {{/if}}
+    
+    {{#if firmBenchProfit}}
+      <div class="main-graph-box">
+        <div class="firm-graph">
+          <h3>Profitability</h3>
+          <div class="box-2x1">
+            <div class="graph-block">{{vertical-bar-chart data = ChartData2 hasLegend=true defaultOuterHeight
+              = 300 defaultOuterWidth = 200 }}</div>
+          </div>
+          <div class="box-2x1">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the
+              1500s, when an unknown printer took a galley of type and scrambled it to
+              make a type specimen book.</p>
+          </div>
+        </div>
+      </div>    
+    {{/if}}
+    {{#if firmBenchRepeat}}
+       <div class="main-graph-box">
+        <div class="firm-graph">
+          <h3>Repeat Clients</h3>
+          <div class="box-2x1">
+            <div class="graph-block">{{vertical-bar-chart data = ChartData3 hasLegend=true defaultOuterHeight
+              = 300 defaultOuterWidth = 200 }}</div>
+          </div>
+          <div class="box-2x1">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since the
+              1500s, when an unknown printer took a galley of type and scrambled it to
+              make a type specimen book.</p>
+          </div>
+        </div>
+      </div>
+    {{/if}}
   </div>
 </article>
 
@@ -105,7 +130,8 @@
     <div class="row">
       <div class="box-1x1">
         <form action="#">
-          <a href="#" id="hide" class="close-btn" {{action 'showFirmBenchModal' false}}><span>X</span></a>
+          <a href="#" id="hide" class="close-btn" {{action 'showFirmBenchModal'
+          false}}><span>X</span></a>
           <div class="clearfix"></div>
           <h2>Compare your firm</h2>
           <ul class="form-compare">
@@ -115,16 +141,19 @@
             <li>
               <input type="text" value="" placeholder="Email address" />
             </li>
-            <li class="side-by-side">{{#x-select value=firmType}} {{#x-option value=''}}Select{{/x-option}}
-              {{#each-in ModalData as |key data|}} {{#if data.name}} {{#x-option value=key}}{{data.name}}{{/x-option}}
+         
+            <li>{{input type="text" value=firmBenchNet size="60" maxlength="10" placeholder="Net Revenue"}}</li>
+            
+            <li>{{input type="text" value=firmBenchProfit size="60" maxlength="10" placeholder="Profitability"}}</li>
+           
+            <li>{{input type="text" value=firmBenchRepeat size="60" maxlength="10" placeholder="Repeat Clients"}}</li>
+            
+            <li class="side-by-side">{{#x-select value=firmSizevalue}} {{#x-option value=''}}Firm Size{{/x-option}}
+              {{#each-in firmSize as |key data|}} {{#if data.size.key}} {{#x-option value=data.size.key}}{{data.size.key}}{{/x-option}}
               {{/if}} {{/each-in}} {{/x-select}}</li>
-            <li class="side-by-side no-margin">{{input type="text" value=firmBench size="60" maxlength="10" placeholder="Net Revenue/Profitability/Repeat Clients"}}</li>
-            <li class="side-by-side">{{#x-select value=firmSizevalue}} {{#x-option value=''}}Select{{/x-option}}
-              {{#each-in firmSize as |key data|}} {{#if data.size.key}} {{#x-option value=data.size.value}}{{data.size.key}}{{/x-option}}
-              {{/if}} {{/each-in}} {{/x-select}}</li>
-            <li class="side-by-side no-margin">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Select{{/x-option}}
+            <li class="side-by-side no-margin">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Firm Specialization{{/x-option}}
               {{#each-in firmSpecialization as |key data|}} {{#if data.specialization.key}}
-              {{#x-option value=data.specialization.value}}{{data.specialization.key}}{{/x-option}}
+              {{#x-option value=data.specialization.key}}{{data.specialization.key}}{{/x-option}}
               {{/if}} {{/each-in}} {{/x-select}}</li>
             <li>
               <input type="button" value="Submit" class="common-btn" {{action 'submitfirmBench'}}>
