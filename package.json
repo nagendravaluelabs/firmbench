@@ -1,19 +1,23 @@
 {
-  "name": "firm-bench",
+  "name": "d3-charts",
   "version": "0.0.0",
-  "description": "Small description for firm-bench goes here",
-  "license": "MIT",
-  "author": "",
+  "description": "Small description for d3-charts goes here",
+  "private": true,
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember test"
   },
+  "repository": "",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "author": "",
+  "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
     "ember-ajax": "^2.4.1",
@@ -36,13 +40,10 @@
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
     "ember-welcome-page": "^1.0.3",
-     "emberx-select": "2.2.1",
-    "loader.js": "^4.0.10"
+    "emberx-select": "2.2.1",
+    "loader.js": "^4.0.10",
+    "ember-cli-simple-validation": "^1.4.1"
   },
-  "engines": {
-    "node": ">= 0.12.0"
-  },
-  "private": true,
   "ember-addon": {
     "paths": [
       "lib/firmbench",
@@ -50,4 +51,3 @@
     ]
   }
 }
-

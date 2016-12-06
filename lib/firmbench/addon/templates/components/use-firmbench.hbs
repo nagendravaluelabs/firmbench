@@ -11,10 +11,9 @@
     {{#if firmBenchNet}}
       <div class="main-graph-box">
         <div class="firm-graph">
-          <h3>Net Revenue</h3>
+          <h3>Net revenue per employee</h3>
           <div class="box-2x1">
-           <div class="graph-block">{{vertical-bar-chart data = ChartData1 hasLegend=true defaultOuterHeight
-              = 300 defaultOuterWidth = 200 }}</div>
+           <div class="graph-block">{{vertical-bar-chart data = ChartData1 hasLegend=false defaultOuterHeight = 300 defaultOuterWidth = 200 }}</div>
           </div>
           <div class="box-2x1">
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -31,7 +30,7 @@
         <div class="firm-graph">
           <h3>Profitability</h3>
           <div class="box-2x1">
-            <div class="graph-block">{{vertical-bar-chart data = ChartData2 hasLegend=true defaultOuterHeight
+            <div class="graph-block">{{vertical-bar-chart data = ChartData2 hasLegend=false defaultOuterHeight
               = 300 defaultOuterWidth = 200 }}</div>
           </div>
           <div class="box-2x1">
@@ -48,7 +47,7 @@
         <div class="firm-graph">
           <h3>Repeat Clients</h3>
           <div class="box-2x1">
-            <div class="graph-block">{{vertical-bar-chart data = ChartData3 hasLegend=true defaultOuterHeight
+            <div class="graph-block">{{vertical-bar-chart data = ChartData3 hasLegend=false defaultOuterHeight
               = 300 defaultOuterWidth = 200 }}</div>
           </div>
           <div class="box-2x1">
@@ -135,44 +134,55 @@
           <div class="clearfix"></div>
           <h2>Compare your firm</h2>
           <ul class="form-compare">
-            <li>
-              <input type="text" value="" placeholder="Firm name" />
+           <li>
+           {{input type="text" value=firmName size="60" min="1" max="100000" maxlength="5" placeholder="Firm Name"}}
+           {{#validation-error-field submitted=submitted className="error" field="firmName"  validation=nameValidation}}invalid Firmname{{/validation-error-field}}
+           </li>
+           <li>{{input type="text" value=email size="60" min="1" max="100000" maxlength="50" placeholder="Email Address"}}
+            {{#validation-error-field submitted=submitted className="error" field="email"  validation=emailValidation}}invalid email{{/validation-error-field}}
             </li>
-            <li>
-              <input type="text" value="" placeholder="Email address" />
-            </li>
-         
-            <li>{{input type="text" value=firmBenchNet size="60" maxlength="10" placeholder="Net Revenue"}}</li>
-            
-            <li>{{input type="text" value=firmBenchProfit size="60" maxlength="10" placeholder="Profitability"}}</li>
-           
-            <li>{{input type="text" value=firmBenchRepeat size="60" maxlength="10" placeholder="Repeat Clients"}}</li>
-            
-            <li class="side-by-side">{{#x-select value=firmSizevalue}} {{#x-option value=''}}Firm Size{{/x-option}}
+           <!--  <li class="side-by-side"><span class="symbol-key">#</span>{{#x-select value=firmSizevalue}} {{#x-option value=''}}Employees{{/x-option}}
               {{#each-in firmSize as |key data|}} {{#if data.size.key}} {{#x-option value=data.size.key}}{{data.size.key}}{{/x-option}}
-              {{/if}} {{/each-in}} {{/x-select}}</li>
-            <li class="side-by-side no-margin">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Firm Specialization{{/x-option}}
+              {{/if}} {{/each-in}} {{/x-select}}</li> -->
+         
+            
+             <li class="side-by-side"><span class="symbol-key">#</span>{{input type="text" value=firmSizevalue size="60" min="1" max="100000" maxlength="5" placeholder="Employees"}}
+             {{#validation-error-field submitted=submitted class="error" field="even"  validation=firmSizeValidation}}invalid number{{/validation-error-field}}
+            </li>
+            <li class="side-by-side no-margin">{{input type="text" value=firmBenchProfit size="60" maxlength="10" placeholder="Profit as a % of net billings"}}<span class="symbol-key">%</span>
+            {{#validation-error-field submitted=submitted class="error" field="even"  validation=firmBenchProfitValidation}}invalid number{{/validation-error-field}}
+            </li>
+            <li class="side-by-side"><span class="symbol-key">$</span>{{input type="text" value=firmBenchNet size="60" maxlength="10" placeholder="Annual net revenue"}}
+            {{#validation-error-field submitted=submitted class="error" field="even"  validation=firmBenchNetValidation}}invalid number{{/validation-error-field}}
+           </li>
+            <li class="side-by-side no-margin">{{input type="text" value=firmBenchRepeat size="60" maxlength="10" placeholder="Share of billings from repeat clients"}} <span class="symbol-key">%</span>
+            {{#validation-error-field submitted=submitted class="error" field="even"  validation=firmBenchRepeatValidation}}invalid number{{/validation-error-field}}
+            </li>
+               <!-- last-one -->
+             <li class="side-by-side select-box">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Firm Specialization{{/x-option}}
               {{#each-in firmSpecialization as |key data|}} {{#if data.specialization.key}}
               {{#x-option value=data.specialization.key}}{{data.specialization.key}}{{/x-option}}
-              {{/if}} {{/each-in}} {{/x-select}}</li>
-            <li>
-              <input type="button" value="Submit" class="common-btn" {{action 'submitfirmBench'}}>
+              {{/if}} {{/each-in}} {{/x-select}} </li>
               
+            <li class="side-by-side button-box no-margin">
+              <input type="button" value="Compare" class="common-btn" {{action 'submitfirmBench'}}>
+            </li> 
+              
+            <li>
               <!-- <a href="#" class="common-btn">Submit</a> -->
               <!-- <button type="submit">Submit</button> -->
             </li>
+            
           </ul>
         </form>
         <div class="disclaimer-firm">
           <h4>Disclaimer</h4>
-          <p>Disclaimer Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and scrambled
-            it to make a type specimen book.</p>
+          <p>This information is used to show how your firm compares to industry benchmarks.  Your information will not be shared with third parties outside of AIA.
+</p>
         </div>
       </div>
     </div>
    </div>
   </div>
 </div>
-<div class="md-overlay"></div>
+<div class="firm-overlay"></div>

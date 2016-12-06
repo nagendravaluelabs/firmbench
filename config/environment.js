@@ -2,9 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'firm-bench',
+    modulePrefix: 'd3-charts',
     environment: environment,
-    rootURL: '/',
+    baseURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -12,8 +12,7 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       },
       EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false
+        Date: false,
       }
     },
 
@@ -33,6 +32,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
+    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter

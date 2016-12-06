@@ -1,5 +1,5 @@
 {
-  "name": "firm-bench",
+  "name": "d3-charts",
   "dependencies": {
     "ember": "~2.10.0-beta.1",
     "ember-cli-shims": "0.1.3",

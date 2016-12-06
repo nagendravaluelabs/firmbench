@@ -75,7 +75,7 @@ blockquote {
 }
 .graph-block{
   min-height: 180px;
-  background: #fff;
+  background: #f5f5f5;
 }
 .national-graph p{
   margin-top: 20px;
@@ -113,6 +113,7 @@ blockquote {
   text-decoration: none;
   line-height: 24px;
   min-width:165px;
+  outline: none !important;
 }
 .get-btn{
   margin-top:35px;
@@ -163,6 +164,13 @@ blockquote {
   .firm-content .box-1x1{
     width: 82% !important;
   }
+  span.symbol-key{
+    left: -20px;
+  }
+  li.side-by-side.no-margin span.symbol-key{
+    left: -30px !important;
+    right: inherit !important;
+  }
 }
 
 .legend-item{
@@ -170,12 +178,25 @@ blockquote {
   display: inline-block;
 }
 
+@media (min-width:768px) and (max-width: 991px){
+  ul.form-compare li.side-by-side.select-box{
+  width: 62% !important;
+}
+
+}
+
+@media (min-width:992px) and (max-width: 1199px){
+  ul.form-compare li.side-by-side.select-box{
+  width: 70% !important;
+}
+
+}
 /*MODAL*/
 
 .slide-modal{
   /* padding: 20px 30px; */
-  background: #808080;
-  color: #fff;
+  background: #EFEFEF;
+  color: #7F7F7F;
   display: block;
   overflow: hidden;
 }
@@ -184,6 +205,7 @@ blockquote {
   padding: 10px 0;
   margin: 0 0 40px 0;
   display: block;
+  color: #7F7F7F;
 }
 .slide-modal form{
   display: block;
@@ -205,9 +227,37 @@ ul.form-compare li.side-by-side{
   margin-right: 4%;
   display: inline-block;
   clear: none;
+  position: relative;
+}
+ul.form-compare li.side-by-side.select-box{
+  width: 75%;
+}
+ul.form-compare li.side-by-side.button-box{
+  width: 15%;
 }
 ul.form-compare li.side-by-side.no-margin{
   margin-right: 0;
+}
+
+/* ul.form-compare li.side-by-side select, ul.form-compare li.side-by-side input[type="text"] {
+  width: 93%;
+} */
+
+span.symbol-key{
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 26px;
+  width: 0px;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  color: #808080;
+}
+li.side-by-side.no-margin span.symbol-key{
+  margin-left: 5px;
+  margin-right: 0px;
+  right: -5px !important;
+  left: inherit;
 }
 
 ul.form-compare li input[type="text"]{
@@ -218,14 +268,15 @@ ul.form-compare li input[type="text"]{
   font-size: 18px;
   color: #646464;
   border: 0 none;
-  background: #fff;
+  background: rgba(0,0,0,0);
+  border: 1px solid #7F7F7F;
 }
 ul.form-compare li select {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     font-family: "architype-light";
-    background: #fff url("../images/drop-down-arrow.jpg") no-repeat scroll right center !important;
+    background: rgba(0,0,0,0) url("../images/drop-down-arrow.jpg") no-repeat scroll right center !important;
     line-height: 24px;
     font-size: 18px;
     color: #808080;
@@ -235,11 +286,16 @@ ul.form-compare li select {
     border: 0 none;
     width: 100%;
     height: 60px;
+    border: 1px solid #7F7F7F;
+}
+ul.form-compare li input[type="text"]:focus,
+ul.form-compare li select:focus{
+  outline: none;
 }
 a.close-btn{
   font-size: 36px;
-  color: #FFF;
-  text-decoration: none;
+  color: #808080 !important;
+  text-decoration: none !important;
   display: inline;
   clear: both;
   position: absolute;
@@ -255,6 +311,10 @@ a.close-btn:hover{
 .disclaimer-firm{
   margin: 60px 0;
   display: block;
+  clear: both;
+}
+.disclaimer-firm *{
+  color: #808080;
 }
 .disclaimer-firm h4{
   font-size: 16px;
@@ -263,11 +323,10 @@ a.close-btn:hover{
   margin: 0 0 20px 0;
 }
 
-
 /* General styles for the modal */
 
 .firm-modal {
-	position: fixed;
+	position: absolute;
 	top: -110%;
 	left: 0%;
 	width: 100%;
@@ -291,19 +350,27 @@ a.close-btn:hover{
 }
 
 .firm-overlay {
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	visibility: hidden;
 	top: 0;
 	left: 0;
-	z-index: 1000;
+	z-index: 2;
 	opacity: 0;
-	background: rgba(143,27,15,0.8);
+	background: #EFEFEF;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 }
+
+
+.groupLabel text{
+  transform: rotate(0) !important;
+  text-anchor: middle;
+  font-size: 70%;
+}
+
 
 .firm-show ~ .firm-overlay {
 	opacity: 1;
@@ -369,4 +436,12 @@ a.close-btn:hover{
   .firm-modal{
     position: absolute;
   }
+}
+
+.ember-view .main-content .col-md-9{
+  position: inherit !important;
+}
+
+.error {
+  color: #FF0000;
 }
