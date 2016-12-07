@@ -192,13 +192,23 @@ blockquote {
 
 }
 /*MODAL*/
-
+body.slideModal-open {
+  overflow: hidden;
+  padding-right: 15px;
+}
+.scrollbar-measure {
+  width: 1px;
+  height: 1px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+}
 .slide-modal{
   /* padding: 20px 30px; */
   background: #EFEFEF;
   color: #7F7F7F;
   display: block;
-  overflow: hidden;
+  overflow: auto;
 }
 .slide-modal h2{
   font-size: 51px;
@@ -326,7 +336,7 @@ a.close-btn:hover{
 /* General styles for the modal */
 
 .firm-modal {
-	position: absolute;
+	position: fixed;
 	top: -110%;
 	left: 0%;
 	width: 100%;
