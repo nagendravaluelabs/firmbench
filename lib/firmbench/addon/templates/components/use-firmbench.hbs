@@ -135,28 +135,28 @@
           <h2>Compare your firm</h2>
           <ul class="form-compare">
            <li>
-           {{input type="text" value=firmName size="60" min="1" max="100000" maxlength="5" placeholder="Firm Name"}}
-           {{#validation-error-field submitted=submitted className="error" field="firmName"  validation=nameValidation}}invalid Firmname{{/validation-error-field}}
+           {{input type="text" value=firmName id="firmName" size="60" min="1" max="100000" maxlength="5" placeholder="Firm Name"}}
+           {{#validation-error-field submitted=submitted className="error" tagName="label" for="firmName" field="firmName"  validation=nameValidation}}Please enter valid Firmname{{/validation-error-field}}
            </li>
-           <li>{{input type="text" value=email size="60" min="1" max="100000" maxlength="50" placeholder="Email Address"}}
-            {{#validation-error-field submitted=submitted className="error" field="email"  validation=emailValidation}}invalid email{{/validation-error-field}}
+           <li>{{input type="text" value=email id="email" size="60" min="1" max="100000" maxlength="50" placeholder="Email Address"}}
+            {{#validation-error-field submitted=submitted className="error" field="email" tagName="label" for="email" validation=emailValidation}}Please enter valid Email{{/validation-error-field}}
             </li>
            <!--  <li class="side-by-side"><span class="symbol-key">#</span>{{#x-select value=firmSizevalue}} {{#x-option value=''}}Employees{{/x-option}}
               {{#each-in firmSize as |key data|}} {{#if data.size.key}} {{#x-option value=data.size.key}}{{data.size.key}}{{/x-option}}
               {{/if}} {{/each-in}} {{/x-select}}</li> -->
          
             
-             <li class="side-by-side"><span class="symbol-key">#</span>{{input type="text" value=firmSizevalue size="60" min="1" max="100000" maxlength="5" placeholder="Employees"}}
-             {{#validation-error-field submitted=submitted class="error" field="even"  validation=firmSizeValidation}}invalid number{{/validation-error-field}}
+             <li class="side-by-side"><span class="symbol-key">#</span>{{input type="text" value=firmSizevalue id="firmSize" size="60" min="1" max="100000" maxlength="5" placeholder="Employees"}}
+             {{#validation-error-field submitted=submitted class="error" field="even" tagName="label" for="firmSize"   validation=firmSizeValidation}}Please enter valid Firmsize(ex:1 to 100000){{/validation-error-field}}
             </li>
-            <li class="side-by-side no-margin">{{input type="text" value=firmBenchProfit size="60" maxlength="10" placeholder="Profit as a % of net billings"}}<span class="symbol-key">%</span>
-            {{#validation-error-field submitted=submitted class="error" field="even"  validation=firmBenchProfitValidation}}invalid number{{/validation-error-field}}
+            <li class="side-by-side no-margin">{{input type="text" value=firmBenchProfit id="profit" size="60" maxlength="10" placeholder="Profit as a % of net billings"}}<span class="symbol-key">%</span>
+            {{#validation-error-field submitted=submitted class="error" field="even" tagName="label" for="profit"  validation=firmBenchProfitValidation}}Please enter valid Profitability Value(ex:10){{/validation-error-field}}
             </li>
-            <li class="side-by-side"><span class="symbol-key">$</span>{{input type="text" value=firmBenchNet size="60" maxlength="10" placeholder="Annual net revenue"}}
-            {{#validation-error-field submitted=submitted class="error" field="even"  validation=firmBenchNetValidation}}invalid number{{/validation-error-field}}
+            <li class="side-by-side"><span class="symbol-key">$</span>{{input type="text" value=firmBenchNet id="netRevenue" size="60" maxlength="10" placeholder="Annual net revenue"}}
+            {{#validation-error-field submitted=submitted class="error" field="even" tagName="label" for="netRevenue" validation=firmBenchNetValidation}}Please enter valid Netrevenue Value(ex:-999999999 to 999999999){{/validation-error-field}}
            </li>
-            <li class="side-by-side no-margin">{{input type="text" value=firmBenchRepeat size="60" maxlength="10" placeholder="Share of billings from repeat clients"}} <span class="symbol-key">%</span>
-            {{#validation-error-field submitted=submitted class="error" field="even"  validation=firmBenchRepeatValidation}}invalid number{{/validation-error-field}}
+            <li class="side-by-side no-margin">{{input type="text" value=firmBenchRepeat id="repeatClients" size="60" maxlength="10" placeholder="Share of billings from repeat clients"}} <span class="symbol-key">%</span>
+            {{#validation-error-field submitted=submitted class="error" field="even" tagName="label" for="repeatClients"  validation=firmBenchRepeatValidation}}Please enter valid Repeatclient Value(ex:10){{/validation-error-field}}
             </li>
                <!-- last-one -->
              <li class="side-by-side select-box">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Firm Specialization{{/x-option}}
