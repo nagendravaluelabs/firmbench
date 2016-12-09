@@ -5,64 +5,69 @@
     Lorem Ipsum has been the industry's standard dummy text ever since the
     1500s, when an unknown printer took a galley of type and scrambled it to
     make a type specimen book.</p>
-    <button class="get-btn common-btn back-btn" {{action 'backToHomeScreen'}}>Back</button>
-    <div class="clearfix"></div>
-  <div class="row">
-    {{#if firmBenchNet}}
-      <div class="main-graph-box">
-        <div class="firm-graph">
-          <h3>Net revenue per employee</h3>
-          <div class="box-2x1">
-           <div class="graph-block">{{vertical-bar-chart data = ChartData1 hasLegend=false defaultOuterHeight = 300 defaultOuterWidth = 200 }}</div>
-          </div>
-          <div class="box-2x1">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book.</p>
-          </div>
+  <button class="get-btn common-btn back-btn"
+  {{action 'backToHomeScreen'}}>Back</button>
+  <div class="clearfix"></div>
+  <div class="row">{{#if firmBenchNet}}
+    <div class="main-graph-box">
+      <div class="firm-graph">
+        <h3>Net revenue per employee</h3>
+        <div class="box-2x1">
+          <div class="graph-block">{{vertical-bar-chart data = ChartData1 hasLegend=false defaultOuterHeight
+            = 300 defaultOuterWidth = 200 sortKey=unsorted}}</div>
+        </div>
+        <div class="box-2x1">
+          <p>Text to the right of the graph should read: “Average annual firm revenue
+            per employee (defined as net billings, or revenues received for services
+            actually performed by the office and equal to gross billings less pass-throughs
+            and reimbursables) increased by more than $10,000 in the period from 2013
+            to 2015. In fact, the average of $108,000 in net billings generated per
+            employee in 2015 is even higher than it was during the pre-downturn peak
+            in 2008. This shows an increase in firm efficiency, which contributes to
+            firm stability. .</p>
         </div>
       </div>
-    {{/if}}
-    
-    {{#if firmBenchProfit}}
-      <div class="main-graph-box">
-        <div class="firm-graph">
-          <h3>Profitability</h3>
-          <div class="box-2x1">
-            <div class="graph-block">{{vertical-bar-chart data = ChartData2 hasLegend=false defaultOuterHeight
-              = 300 defaultOuterWidth = 200 }}</div>
-          </div>
-          <div class="box-2x1">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book.</p>
-          </div>
+    </div>{{/if}} {{#if firmBenchProfit}}
+    <div class="main-graph-box">
+      <div class="firm-graph">
+        <h3>Profitability</h3>
+        <div class="box-2x1">
+          <div class="graph-block">{{vertical-bar-chart data = ChartData2 hasLegend=false defaultOuterHeight
+            = 300 defaultOuterWidth = 200 sortKey=unsorted}}</div>
         </div>
-      </div>    
-    {{/if}}
-    {{#if firmBenchRepeat}}
-       <div class="main-graph-box">
-        <div class="firm-graph">
-          <h3>Repeat Clients</h3>
-          <div class="box-2x1">
-            <div class="graph-block">{{vertical-bar-chart data = ChartData3 hasLegend=false defaultOuterHeight
-              = 300 defaultOuterWidth = 200 }}</div>
-          </div>
-          <div class="box-2x1">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry's standard dummy text ever since the
-              1500s, when an unknown printer took a galley of type and scrambled it to
-              make a type specimen book.</p>
-          </div>
+        <div class="box-2x1">
+          <p>The general upward trend of profits as the industry has been recovering
+            from the economic downturn is clear: More than one in five firms was very
+            profitable in 2015, and more importantly, the percentage reporting a loss
+            declined sharply in recent years from more than 20% in 2011 to fewer than
+            10% by 2015. As firms have returned to profitability, firm owners have
+            been better able to reinvest in their businesses, with a focus on adding
+            services, improving staff productivity, and rebuilding firm culture. After
+            falling during the Great Recession, average firm profits as a share of
+            net billings averaged more than 13% by 2015. More detail and information
+            in the AIA Firm Survey Report .</p>
         </div>
       </div>
-    {{/if}}
-  </div>
-</article>
-
-{{else}}
+    </div>{{/if}} {{#if firmBenchRepeat}}
+    <div class="main-graph-box">
+      <div class="firm-graph">
+        <h3>Repeat Clients</h3>
+        <div class="box-2x1">
+          <div class="graph-block">{{vertical-bar-chart data = ChartData3 hasLegend=false defaultOuterHeight=300 defaultOuterWidth = 200 sortKey=unsorted}}</div>
+        </div>
+        <div class="box-2x1">
+          <p>On average, architecture firms derive a larger share of their firm billings
+            from repeat clients (72%) than from new clients (28%). That share is even
+            higher for nonresidential firms, which reported that an average of nearly
+            three-quarters of their 2015 billings were from repeat clients, in contrast
+            to firms with a residential specialization, which reported that 59% of
+            their billings were derived from repeat clients. This is important because
+            firms that foster and maintain client relationships tend to be more prosperous.
+            More detail and information in the AIA Firm Survey Report .</p>
+        </div>
+      </div>
+    </div>{{/if}}</div>
+</article>{{else}}
 <h2>Vestibulum rutrum quam</h2>
 <p class="para-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -121,68 +126,76 @@
   make a type specimen book.
   <br>
   <a href="#" class="compare-btn">Compare your firm today!</a>
-</p>
-{{/if}}
+</p>{{/if}}
 <div class="slide-modal firm-modal firm-effect-7{{if firmBenchModal ' firm-show' ' firm-hide'}}">
   <div class="firm-content">
-   <div class="container">
-    <div class="row">
-      <div class="box-1x1">
-        <form action="#">
-          <a href="#" id="hide" class="close-btn" {{action 'showFirmBenchModal'
-          false}}><span>X</span></a>
-          <div class="clearfix"></div>
-          <h2>Compare your firm</h2>
-          <ul class="form-compare">
-           <li>
-           {{input type="text" value=firmName id="firmName" size="60" min="1" max="100000" maxlength="5" placeholder="Firm Name"}}
-           {{#validation-error-field submitted=submitted className="error" tagName="label" for="firmName" field="firmName"  validation=nameValidation}}Please enter valid Firmname{{/validation-error-field}}
-           </li>
-           <li>{{input type="text" value=email id="email" size="60" min="1" max="100000" maxlength="50" placeholder="Email Address"}}
-            {{#validation-error-field submitted=submitted className="error" field="email" tagName="label" for="email" validation=emailValidation}}Please enter valid Email{{/validation-error-field}}
-            </li>
-           <!--  <li class="side-by-side"><span class="symbol-key">#</span>{{#x-select value=firmSizevalue}} {{#x-option value=''}}Employees{{/x-option}}
+    <div class="container">
+      <div class="row">
+        <div class="box-1x1">
+          <form action="#">
+            <a href="#" id="hide" class="close-btn" {{action 'showFirmBenchModal'
+            false}}><span>X</span></a>
+            <div class="clearfix"></div>
+            <h2>Compare your firm</h2>
+            <ul class="form-compare">
+              <li>{{input type="text" value=firmName id="firmName" size="60" min="1" max="100000"
+                placeholder="Firm name"}} {{#validation-error-field submitted=submitted
+                className="error" tagName="label" for="firmName" field="firmName" validation=nameValidation}}Please
+                enter valid Firm name{{/validation-error-field}}</li>
+              <li>{{input type="text" value=email id="email" size="60" min="1" max="100000"
+                placeholder="Email address"}} {{#validation-error-field submitted=submitted
+                className="error" field="email" tagName="label" for="email" validation=emailValidation}}Please
+                enter valid Email address{{/validation-error-field}}</li>
+              <!-- <li class="side-by-side"><span class="symbol-key">#</span>{{#x-select value=firmSizevalue}} {{#x-option value=''}}Employees{{/x-option}}
               {{#each-in firmSize as |key data|}} {{#if data.size.key}} {{#x-option value=data.size.key}}{{data.size.key}}{{/x-option}}
               {{/if}} {{/each-in}} {{/x-select}}</li> -->
-         
-            
-             <li class="side-by-side"><span class="symbol-key">#</span>{{input type="text" value=firmSizevalue id="firmSize" size="60" min="1" max="100000" maxlength="5" placeholder="Employees"}}
-             {{#validation-error-field submitted=submitted class="error" field="even" tagName="label" for="firmSize"   validation=firmSizeValidation}}Please enter valid Firmsize(ex:1 to 100000){{/validation-error-field}}
-            </li>
-            <li class="side-by-side no-margin">{{input type="text" value=firmBenchProfit id="profit" size="60" maxlength="10" placeholder="Profit as a % of net billings"}}<span class="symbol-key">%</span>
-            {{#validation-error-field submitted=submitted class="error" field="even" tagName="label" for="profit"  validation=firmBenchProfitValidation}}Please enter valid Profitability Value(ex:10){{/validation-error-field}}
-            </li>
-            <li class="side-by-side"><span class="symbol-key">$</span>{{input type="text" value=firmBenchNet id="netRevenue" size="60" maxlength="10" placeholder="Annual net revenue"}}
-            {{#validation-error-field submitted=submitted class="error" field="even" tagName="label" for="netRevenue" validation=firmBenchNetValidation}}Please enter valid Netrevenue Value(ex:-999999999 to 999999999){{/validation-error-field}}
-           </li>
-            <li class="side-by-side no-margin">{{input type="text" value=firmBenchRepeat id="repeatClients" size="60" maxlength="10" placeholder="Share of billings from repeat clients"}} <span class="symbol-key">%</span>
-            {{#validation-error-field submitted=submitted class="error" field="even" tagName="label" for="repeatClients"  validation=firmBenchRepeatValidation}}Please enter valid Repeatclient Value(ex:10){{/validation-error-field}}
-            </li>
-               <!-- last-one -->
-             <li class="side-by-side select-box">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Firm Specialization{{/x-option}}
-              {{#each-in firmSpecialization as |key data|}} {{#if data.specialization.key}}
-              {{#x-option value=data.specialization.key}}{{data.specialization.key}}{{/x-option}}
-              {{/if}} {{/each-in}} {{/x-select}} </li>
+              <li class="side-by-side">
+                <span class="symbol-key">#</span>{{input type="text" value=firmSizevalue id="firmSize" size="60"
+                min="1" max="100000" placeholder="Employees"}} {{#validation-error-field
+                submitted=submitted class="error" field="even" tagName="label" for="firmSize"
+                validation=firmSizeValidation}}Please enter valid Firmsize(ex:1 to 100000){{/validation-error-field}}</li>
+              <li
+              class="side-by-side no-margin">{{input type="text" value=firmBenchProfit id="profit" size="60" placeholder="Profit as a % of net billings"}}
               
-            <li class="side-by-side button-box no-margin">
-              <input type="button" value="Compare" class="common-btn" {{action 'submitfirmBench'}}>
-            </li> 
-              
-            <li>
-              <!-- <a href="#" class="common-btn">Submit</a> -->
-              <!-- <button type="submit">Submit</button> -->
-            </li>
-            
-          </ul>
-        </form>
-        <div class="disclaimer-firm">
-          <h4>Disclaimer</h4>
-          <p>This information is used to show how your firm compares to industry benchmarks.  Your information will not be shared with third parties outside of AIA.
-</p>
+                <span class="symbol-key">%</span>{{#validation-error-field submitted=submitted class="error" field="even"
+                tagName="label" for="profit" validation=firmBenchProfitValidation}}Please
+                enter valid Profitability Value(ex:-100 to 100){{/validation-error-field}}</li>
+                <li
+                class="side-by-side">
+                  <span class="symbol-key">$</span>{{input type="text" value=firmBenchNet id="netRevenue" size="60"
+                  placeholder="Annual net revenue"}} {{#validation-error-field submitted=submitted
+                  class="error" field="even" tagName="label" for="netRevenue" validation=firmBenchNetValidation}}Please
+                  enter valid Netrevenue Value(ex:-999999999 to 999999999){{/validation-error-field}}</li>
+                  <li
+                  class="side-by-side no-margin">{{input type="text" value=firmBenchRepeat id="repeatClients" size="60"
+                    placeholder="Share of billings from repeat clients"}}
+                    <span class="symbol-key">%</span>{{#validation-error-field submitted=submitted class="error" field="even"
+                    tagName="label" for="repeatClients" validation=firmBenchRepeatValidation}}Please
+                    enter valid Repeatclient Value(ex:0 to 100){{/validation-error-field}}</li>
+                    <!--
+                    last-one -->
+                    <li class="side-by-side select-box">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Firm
+                      specialization{{/x-option}} {{#each-in firmSpecialization as |key data|}}
+                      {{#if data.specialization.key}} {{#x-option value=data.specialization.key}}{{data.specialization.key}}{{/x-option}}
+                      {{/if}} {{/each-in}} {{/x-select}}</li>
+                    <li class="side-by-side button-box no-margin">
+                      <input type="button" value="Compare" class="common-btn" {{action
+                      'submitfirmBench'}}>
+                    </li>
+                    <li>
+                      <!-- <a href="#" class="common-btn">Submit</a> -->
+                      <!-- <button type="submit">Submit</button> -->
+                    </li>
+            </ul>
+          </form>
+          <div class="disclaimer-firm">
+            <h4>Disclaimer</h4>
+            <p>This information is used to show how your firm compares to industry benchmarks.
+              Your information will not be shared with third parties outside of AIA.</p>
+          </div>
         </div>
       </div>
     </div>
-   </div>
   </div>
 </div>
 <div class="firm-overlay"></div>

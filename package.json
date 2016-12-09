@@ -42,7 +42,8 @@
     "ember-welcome-page": "^1.0.3",
     "emberx-select": "2.2.1",
     "loader.js": "^4.0.10",
-    "ember-cli-simple-validation": "^1.4.1"
+    "ember-cli-simple-validation": "^1.4.1",
+    "ember-cli-format-number": "2.0.0"
   },
   "ember-addon": {
     "paths": [
