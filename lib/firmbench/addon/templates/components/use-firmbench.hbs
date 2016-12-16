@@ -8,7 +8,7 @@
   <button class="get-btn common-btn back-btn"
   {{action 'backToHomeScreen'}}>Back</button>
   <div class="clearfix"></div>
-  <div class="row">{{#if firmBenchNet}}
+  <div class="row">
     <div class="main-graph-box">
       <div class="firm-graph">
         <h3>Net revenue per employee</h3>
@@ -24,10 +24,19 @@
             to 2015. In fact, the average of $108,000 in net billings generated per
             employee in 2015 is even higher than it was during the pre-downturn peak
             in 2008. This shows an increase in firm efficiency, which contributes to
-            firm stability. .</p>
+            firm stability. .
+            More detail and information in the<a href="https://www.aia.org/resources/6151-aia-firm-survey-report"> AIA Firm Survey Report.</a>
+            Resources for related information:
+            <ul><li><a href="https://aiau.aia.org/courses/aia-entrepreneur-summit-2015-new-models-part-two">AIA Entrepreneur Summit 2015: New Models (Part Two)</a></li></ul>
+                                              <ul><li><a href="http://network.aia.org/practicemanagement/home">Practice Management Knowledge Community</a></li></ul>
+                                              <ul><li><a href="http://new.aia.org/resources/10046-the-architecture-billings-index"> Architecture Billings Index (ABI)</a></li></ul>
+                                              <ul><li><a href="http://new.aia.org/resources/10081-aia-consensus-construction-forecast">Consensus Construction Forecast</a></li></ul>
+                                              <ul><li><a href="http://www.aia.org/compensation">AIA Compensation Survey Report</a></li></ul>
+                                              <ul><li><a href="http://new.aia.org/best-practices?query=">    Best Practices Chapter 7: Financial Management</a></li></ul>                                              
+                                              </p>
         </div>
       </div>
-    </div>{{/if}} {{#if firmBenchProfit}}
+    </div>
     <div class="main-graph-box">
       <div class="firm-graph">
         <h3>Profitability</h3>
@@ -45,10 +54,16 @@
             services, improving staff productivity, and rebuilding firm culture. After
             falling during the Great Recession, average firm profits as a share of
             net billings averaged more than 13% by 2015. More detail and information
-            in the AIA Firm Survey Report .</p>
+            in the<a href="http://www.aia.org/firmsurvey">  AIA Firm Survey Report</a> 
+            In the graph: “You” data should always be displayed as the left column.
+            Resources for related information:
+                <ul> <li> <a href="http://new.aia.org/resources/10046-the-architecture-billings-index">Architecture Billings Index (ABI)</a></li>
+                    <li> <a href="http://new.aia.org/resources/10081-aia-consensus-construction-forecast">Consensus Construction Forecast</a></li>
+                   <li> <a href="http://new.aia.org/best-practices?query="> Best Practices Chapter 7: Financial Management</a></li>
+                   <li> <a href="http://store.aia.org/products/architects-handbook-of-professional-practice-15th-edition?variant=16398845633"> Architect’s Handbook of Professional Practice, 15e</a></li></ul></p>
         </div>
       </div>
-    </div>{{/if}} {{#if firmBenchRepeat}}
+    </div>
     <div class="main-graph-box">
       <div class="firm-graph">
         <h3>Repeat Clients</h3>
@@ -63,10 +78,18 @@
             to firms with a residential specialization, which reported that 59% of
             their billings were derived from repeat clients. This is important because
             firms that foster and maintain client relationships tend to be more prosperous.
-            More detail and information in the AIA Firm Survey Report .</p>
+            More detail and information in the<a href=""> AIA Firm Survey Report .</a>
+            Resources for related information:
+           <ul> <li> <a href="http://www.aia.org/clientinsights">  Client Insights Report</a></li>
+               <li> <a href="http://network.aia.org/practicemanagement/home">  Practice Management Knowledge Community</a></li>
+               <li> <a href="http://new.aia.org/best-practices?query=">  Best Practices Chapter 6: Marketing and Business Development</a></li>
+                <li> <a href="http://new.aia.org/resources/10046-the-architecture-billings-index"> Architecture Billings Index (ABI)</a></li></ul></p>
         </div>
       </div>
-    </div>{{/if}}</div>
+    </div>
+    <button class="get-btn common-btn back-btn"
+  {{action 'backToHomeScreen'}}>Back</button>
+    </div>
 </article>{{else}}
 <h2>Vestibulum rutrum quam</h2>
 <p class="para-txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -153,25 +176,25 @@
                 <span class="symbol-key">#</span>{{input type="text" value=firmSizevalue id="firmSize" size="60"
                 min="1" max="100000" placeholder="Employees"}} {{#validation-error-field
                 submitted=submitted class="error" field="even" tagName="label" for="firmSize"
-                validation=firmSizeValidation}}Please enter valid Firmsize(ex:1 to 100000){{/validation-error-field}}</li>
+                validation=firmSizeValidation}}Please enter valid firmsize(ex:1 to 100000){{/validation-error-field}}</li>
               <li
               class="side-by-side no-margin">{{input type="text" value=firmBenchProfit id="profit" size="60" placeholder="Profit as a % of net billings"}}
               
                 <span class="symbol-key">%</span>{{#validation-error-field submitted=submitted class="error" field="even"
                 tagName="label" for="profit" validation=firmBenchProfitValidation}}Please
-                enter valid Profitability Value(ex:-100 to 100){{/validation-error-field}}</li>
+                enter valid profitability value(ex:-100 to 100){{/validation-error-field}}</li>
                 <li
                 class="side-by-side">
                   <span class="symbol-key">$</span>{{input type="text" value=firmBenchNet id="netRevenue" size="60"
                   placeholder="Annual net revenue"}} {{#validation-error-field submitted=submitted
                   class="error" field="even" tagName="label" for="netRevenue" validation=firmBenchNetValidation}}Please
-                  enter valid Netrevenue Value(ex:-999999999 to 999999999){{/validation-error-field}}</li>
+                  enter valid netrevenue value(ex:-999999999 to 999999999){{/validation-error-field}}</li>
                   <li
                   class="side-by-side no-margin">{{input type="text" value=firmBenchRepeat id="repeatClients" size="60"
                     placeholder="Share of billings from repeat clients"}}
                     <span class="symbol-key">%</span>{{#validation-error-field submitted=submitted class="error" field="even"
                     tagName="label" for="repeatClients" validation=firmBenchRepeatValidation}}Please
-                    enter valid Repeatclient Value(ex:0 to 100){{/validation-error-field}}</li>
+                    enter valid repeat client value(ex:0 to 100){{/validation-error-field}}</li>
                     <!--
                     last-one -->
                     <li class="side-by-side select-box">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Firm
