@@ -27,12 +27,14 @@
             firm stability. .
             More detail and information in the<a href="https://www.aia.org/resources/6151-aia-firm-survey-report"> AIA Firm Survey Report.</a>
             Resources for related information:
-            <ul><li><a href="https://aiau.aia.org/courses/aia-entrepreneur-summit-2015-new-models-part-two">AIA Entrepreneur Summit 2015: New Models (Part Two)</a></li></ul>
-                                              <ul><li><a href="http://network.aia.org/practicemanagement/home">Practice Management Knowledge Community</a></li></ul>
-                                              <ul><li><a href="http://new.aia.org/resources/10046-the-architecture-billings-index"> Architecture Billings Index (ABI)</a></li></ul>
-                                              <ul><li><a href="http://new.aia.org/resources/10081-aia-consensus-construction-forecast">Consensus Construction Forecast</a></li></ul>
-                                              <ul><li><a href="http://www.aia.org/compensation">AIA Compensation Survey Report</a></li></ul>
-                                              <ul><li><a href="http://new.aia.org/best-practices?query=">    Best Practices Chapter 7: Financial Management</a></li></ul>                                              
+            <ul class="list-firm">
+            <li><a href="https://aiau.aia.org/courses/aia-entrepreneur-summit-2015-new-models-part-two">AIA Entrepreneur Summit 2015: New Models (Part Two)</a></li>
+            <li><a href="http://network.aia.org/practicemanagement/home" target="_blank">Practice Management Knowledge Community</a></li>
+            <li><a href="http://new.aia.org/resources/10046-the-architecture-billings-index" target="_blank"> Architecture Billings Index (ABI)</a></li>
+            <li><a href="http://new.aia.org/resources/10081-aia-consensus-construction-forecast" target="_blank">Consensus Construction Forecast</a></li>
+            <li><a href="http://www.aia.org/compensation" target="_blank">AIA Compensation Survey Report</a></li>
+            <li><a href="http://new.aia.org/best-practices?query=" target="_blank">    Best Practices Chapter 7: Financial Management</a></li>
+            </ul>                                              
                                               </p>
         </div>
       </div>
@@ -57,10 +59,13 @@
             in the<a href="http://www.aia.org/firmsurvey">  AIA Firm Survey Report</a> 
             In the graph: “You” data should always be displayed as the left column.
             Resources for related information:
-                <ul> <li> <a href="http://new.aia.org/resources/10046-the-architecture-billings-index">Architecture Billings Index (ABI)</a></li>
-                    <li> <a href="http://new.aia.org/resources/10081-aia-consensus-construction-forecast">Consensus Construction Forecast</a></li>
-                   <li> <a href="http://new.aia.org/best-practices?query="> Best Practices Chapter 7: Financial Management</a></li>
-                   <li> <a href="http://store.aia.org/products/architects-handbook-of-professional-practice-15th-edition?variant=16398845633"> Architect’s Handbook of Professional Practice, 15e</a></li></ul></p>
+                <ul class="list-firm"> 
+                <li> <a href="http://new.aia.org/resources/10046-the-architecture-billings-index">Architecture Billings Index (ABI)</a></li>
+                <li> <a href="http://new.aia.org/resources/10081-aia-consensus-construction-forecast"target="_blank">Consensus Construction Forecast</a></li>
+                <li> <a href="http://new.aia.org/best-practices?query=" target="_blank"> Best Practices Chapter 7: Financial Management</a></li>
+                <li> <a href="http://store.aia.org/products/architects-handbook-of-professional-practice-15th-edition?variant=16398845633" target="_blank"> Architect’s Handbook of Professional Practice, 15e</a></li>
+                </ul>
+                </p>
         </div>
       </div>
     </div>
@@ -80,10 +85,13 @@
             firms that foster and maintain client relationships tend to be more prosperous.
             More detail and information in the<a href=""> AIA Firm Survey Report .</a>
             Resources for related information:
-           <ul> <li> <a href="http://www.aia.org/clientinsights">  Client Insights Report</a></li>
-               <li> <a href="http://network.aia.org/practicemanagement/home">  Practice Management Knowledge Community</a></li>
-               <li> <a href="http://new.aia.org/best-practices?query=">  Best Practices Chapter 6: Marketing and Business Development</a></li>
-                <li> <a href="http://new.aia.org/resources/10046-the-architecture-billings-index"> Architecture Billings Index (ABI)</a></li></ul></p>
+           <ul class="list-firm"> 
+           <li> <a href="http://www.aia.org/clientinsights" target="_blank">  Client Insights Report</a></li>
+           <li> <a href="http://network.aia.org/practicemanagement/home" target="_blank">  Practice Management Knowledge Community</a></li>
+           <li> <a href="http://new.aia.org/best-practices?query=" target="_blank">  Best Practices Chapter 6: Marketing and Business Development</a></li>
+           <li> <a href="http://new.aia.org/resources/10046-the-architecture-billings-index" target="_blank"> Architecture Billings Index (ABI)</a></li>
+           </ul>
+           </p>
         </div>
       </div>
     </div>
@@ -164,11 +172,11 @@
               <li>{{input type="text" value=firmName id="firmName" size="60" min="1" max="100000"
                 placeholder="Firm name"}} {{#validation-error-field submitted=submitted
                 className="error" tagName="label" for="firmName" field="firmName" validation=nameValidation}}Please
-                enter valid Firm name{{/validation-error-field}}</li>
+                enter valid firm name{{/validation-error-field}}</li>
               <li>{{input type="text" value=email id="email" size="60" min="1" max="100000"
                 placeholder="Email address"}} {{#validation-error-field submitted=submitted
                 className="error" field="email" tagName="label" for="email" validation=emailValidation}}Please
-                enter valid Email address{{/validation-error-field}}</li>
+                enter valid email address{{/validation-error-field}}</li>
               <!-- <li class="side-by-side"><span class="symbol-key">#</span>{{#x-select value=firmSizevalue}} {{#x-option value=''}}Employees{{/x-option}}
               {{#each-in firmSize as |key data|}} {{#if data.size.key}} {{#x-option value=data.size.key}}{{data.size.key}}{{/x-option}}
               {{/if}} {{/each-in}} {{/x-select}}</li> -->
@@ -176,25 +184,25 @@
                 <span class="symbol-key">#</span>{{input type="text" value=firmSizevalue id="firmSize" size="60"
                 min="1" max="100000" placeholder="Employees"}} {{#validation-error-field
                 submitted=submitted class="error" field="even" tagName="label" for="firmSize"
-                validation=firmSizeValidation}}Please enter valid firmsize(ex:1 to 100000){{/validation-error-field}}</li>
+                validation=firmSizeValidation}}Please enter valid firm size (ex:1 to 100000){{/validation-error-field}}</li>
               <li
               class="side-by-side no-margin">{{input type="text" value=firmBenchProfit id="profit" size="60" placeholder="Profit as a % of net billings"}}
               
                 <span class="symbol-key">%</span>{{#validation-error-field submitted=submitted class="error" field="even"
                 tagName="label" for="profit" validation=firmBenchProfitValidation}}Please
-                enter valid profitability value(ex:-100 to 100){{/validation-error-field}}</li>
+                enter valid profitability value (ex:-100 to 100){{/validation-error-field}}</li>
                 <li
                 class="side-by-side">
                   <span class="symbol-key">$</span>{{input type="text" value=firmBenchNet id="netRevenue" size="60"
                   placeholder="Annual net revenue"}} {{#validation-error-field submitted=submitted
                   class="error" field="even" tagName="label" for="netRevenue" validation=firmBenchNetValidation}}Please
-                  enter valid netrevenue value(ex:-999999999 to 999999999){{/validation-error-field}}</li>
+                  enter valid net revenue value (ex:-999999999 to 999999999){{/validation-error-field}}</li>
                   <li
                   class="side-by-side no-margin">{{input type="text" value=firmBenchRepeat id="repeatClients" size="60"
                     placeholder="Share of billings from repeat clients"}}
                     <span class="symbol-key">%</span>{{#validation-error-field submitted=submitted class="error" field="even"
                     tagName="label" for="repeatClients" validation=firmBenchRepeatValidation}}Please
-                    enter valid repeat client value(ex:0 to 100){{/validation-error-field}}</li>
+                    enter valid repeat client value (ex:0 to 100){{/validation-error-field}}</li>
                     <!--
                     last-one -->
                     <li class="side-by-side select-box">{{#x-select value=firmSpecializationValue}} {{#x-option value=''}}Firm

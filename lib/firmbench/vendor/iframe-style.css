@@ -48,6 +48,9 @@ a{
   color: #fa4132;
   text-decoration: none;
 }
+a:hover, a:focus{
+color: #ef4135 !important;
+}
 blockquote {
   background: #fff;
   padding: 50px 100px !important;
@@ -466,4 +469,11 @@ svg text{
 .main-content .chart-frame .hovered text {
   fill: #084C61 !important;
   stroke: #084C61 !important;
+}
+
+ul.list-firm{
+  padding: 20px 0 0 20px;
+}
+ul.list-firm li {
+  padding: 5px 0;
 }
