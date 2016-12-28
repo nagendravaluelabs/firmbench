@@ -371,7 +371,7 @@ a.close-btn:hover{
 .groupLabel text{
   transform: rotate(0) !important;
   text-anchor: middle;
-  font-size: 76%;
+  font-size: 70%;
   font-family: "architype-light";
 }
 svg text{
